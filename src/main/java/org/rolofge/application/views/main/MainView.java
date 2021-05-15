@@ -20,17 +20,16 @@ import com.vaadin.flow.component.tabs.TabsVariant;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
-import org.rolofge.application.views.helloworld.HelloWorldView;
+import org.rolofge.application.views.project.ProjectView;
 import org.rolofge.application.views.about.AboutView;
 
 /**
  * The main view is a top-level placeholder for other views.
  */
 @CssImport("./styles/views/main/main-view.css")
-@PWA(name = "My Project", shortName = "My Project", enableInstallPrompt = false)
+@PWA(name = "Haushaltsbuch", shortName = "Haushaltsbuch", enableInstallPrompt = false)
 @JsModule("./styles/shared-styles.js")
 public class MainView extends AppLayout {
-
     private final Tabs menu;
     private H1 viewTitle;
 
@@ -81,7 +80,10 @@ public class MainView extends AppLayout {
     }
 
     private Component[] createMenuItems() {
-        return new Tab[]{createTab("Hello World", HelloWorldView.class), createTab("About", AboutView.class)};
+        return new Tab[]{
+                createTab(getTranslation("main.menu.projects"), ProjectView.class),
+               // createTab("Settings", SettingsView.class),
+                createTab(getTranslation("main.menu.about"), AboutView.class)};
     }
 
     private static Tab createTab(String text, Class<? extends Component> navigationTarget) {

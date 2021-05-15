@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -15,15 +16,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Project {
     @Id
-    @GeneratedValue
-    private String id;
+    @Builder.Default
+    private String id = UUID.randomUUID().toString();
 
     @Column(nullable = false, length = 100)
     private String name;
 
     @Column(name = "user_id", nullable = false)
     private String userId;
-
-    @Column(name = "test")
-    private String test;
 }

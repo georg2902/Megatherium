@@ -22,9 +22,16 @@ public class ProjectServiceTest {
     private ProjectRepository repository;
 
     @Test
-    public void test() {
+    public void testById() {
         ProjectService service = new ProjectService(repository);
         List<ProjectDto> projectsById = service.getProjectsById("1");
+        System.out.println(projectsById);
+    }
+
+    @Test
+    public void testAll() {
+        ProjectService service = new ProjectService(repository);
+        List<ProjectDto> projectsById = service.getProjects(0,10);
         System.out.println(projectsById);
     }
 }

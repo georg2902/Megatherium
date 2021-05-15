@@ -40,7 +40,7 @@ public class JpaConfig {
         properties.put("javax.persistence.jdbc.url", "jdbc:postgresql://192.168.178.47:5432/haushaltsbuch");
         properties.put("javax.persistence.jdbc.user", "postgres");
         properties.put("javax.persistence.jdbc.password", "A123.321");
-//        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL9Dialect");
+        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL9Dialect");
 //        properties.put("hibernate.hbm2ddl.auto", "update");
 //        properties.put("hibernate.transaction.jta.platform", "org.hibernate.service.jta.platform.internal.WeblogicJtaPlatform");
 //        properties.put("hibernate.show_sql", "true");

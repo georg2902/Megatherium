@@ -41,6 +41,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -195,6 +199,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.rapidpm/rapidpm-dependencies-core-properties -->
+        <dependency>
+            <groupId>org.rapidpm</groupId>
+            <artifactId>rapidpm-dependencies-core-properties</artifactId>
+            <version>04.06.00-RPM</version>
+        </dependency>
+
     </dependencies>
 
     <build>
